@@ -1,13 +1,16 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const questions = require("./utils/questions");
+const generateManagerHTML = require("./utils/generateHTML");
 
 const questionResponses = async (questions) => {
   const answers = await inquirer.prompt(questions);
+  console.log(answers);
   return answers;
 };
 
-const writeHTML = () => {
+const writeHTML = (answers) => {
+  console.log(answers);
   const callback = (err) => {
     if (err) {
       console.log(err);
@@ -15,7 +18,17 @@ const writeHTML = () => {
       console.log("Created Team Profile!");
     }
   };
-  fs.writeFile("./utils/TestHTML.html", `hi`, "utf8", callback);
+  fs.writeFile(
+    "../dist/TestHTML.html",
+    generateManagerHTML(answers),
+    "utf8",
+    callback
+  );
 };
 
-writeHTML();
+const init = async () => {
+  const answers = await questionResponses(questions);
+  writeHTML(answers);
+};
+
+init(questions);

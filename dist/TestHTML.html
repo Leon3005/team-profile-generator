@@ -1,6 +1,4 @@
-const generateManagerHTML = (data) => {
-  const { managerName, managerId, managerEmail, managerOfficeNum } = data;
-  return `
+
   <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,13 +26,13 @@ const generateManagerHTML = (data) => {
         style="width: 18rem"
       >
         <div class="card-body">
-          <h5 class="card-title">${managerName}</h5>
+          <h5 class="card-title">Leon</h5>
           <p class="card-text">Manager</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item text-white bg-dark">ID: ${managerId}</li>
-          <li class="list-group-item text-white bg-dark">Email: ${managerEmail}</li>
-          <li class="list-group-item text-white bg-dark">Office Number: ${managerOfficeNum}</li>
+          <li class="list-group-item text-white bg-dark">ID: 8363</li>
+          <li class="list-group-item text-white bg-dark">Email: leonwheeler08@gmail.com</li>
+          <li class="list-group-item text-white bg-dark">Office Number: 01217962022</li>
         </ul>
         <div class="card-body">
           <a href="#" class="card-link">Card link</a>
@@ -49,7 +47,4 @@ const generateManagerHTML = (data) => {
         <script src="../index.js"></script>
       </body>
     </html>
-  `;
-};
-
-module.exports = generateManagerHTML;
+  
