@@ -19,6 +19,25 @@ const questions = [
     message: "Please enter the office number:",
     name: "managerOfficeNum",
   },
+  {
+    type: "list",
+    message: "Select the employee you would like to add:",
+    name: "employeeChoice",
+    choices: [
+      {
+        name: "Engineer",
+        value: "engineer",
+      },
+      {
+        name: "Intern",
+        value: "intern",
+      },
+      {
+        name: "Exit",
+        value: "exit",
+      },
+    ],
+  },
 ];
 
 // Exporting the questions array to be used in another file.
