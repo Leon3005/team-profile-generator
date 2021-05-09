@@ -1,15 +1,14 @@
 const Manager = require("../../lib/manager");
 
 const generateManagerCard = (manager) => {
-  const { name, id, email, officeNumber } = manager;
-  console.log(name);
+  const { Name, id, email, officeNumber } = manager;
   return `
           <div
           class="card text-white bg-dark mb-3 engineerCard"
           style="width: 18rem"
         >
           <div class="card-body">
-            <h5 class="card-title">${name}</h5>
+            <h5 class="card-title">${Name}</h5>
             <p class="card-text">Manager</p>
           </div>
           <ul class="list-group list-group-flush">

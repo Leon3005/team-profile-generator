@@ -8,7 +8,7 @@ const createManager = async () => {
     {
       type: "input",
       message: "Please enter the manager name:",
-      name: "name",
+      name: "Name",
       when: (answers) => answers.employeeChoice === "manager",
     },
     {
@@ -33,7 +33,12 @@ const createManager = async () => {
 
   const answers = await questionAnswers(questions);
 
-  const employee = new Manager(answers);
+  const employee = new Manager(
+    answers.Name,
+    answers.id,
+    answers.email,
+    answers.officeNumber
+  );
 
   return employee;
 };
