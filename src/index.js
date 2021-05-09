@@ -9,6 +9,37 @@ const questionResponses = async (questions) => {
   return answers;
 };
 
+const collectEmployees = async () => {
+  const employees = [];
+
+  let inProgress = true;
+
+  while (inProgress) {
+    const answers = await questionResponses();
+
+    if (answers.employeeChoice === "exit") {
+      inProgress = false;
+    } else {
+      if (answers.employeeChoice === "terrestrial") {
+        const terrestrialAnimal = await createTerrestrialAnimal();
+        animals.push(terrestrialAnimal);
+      }
+
+      if (answers.employeeChoice === "aquatic") {
+        const aquaticAnimal = await createAquaticAnimal();
+        animals.push(aquaticAnimal);
+      }
+
+      if (answers.employeeChoice === "aerial") {
+        const aerialAnimal = createAerialAnimal();
+        animals.push(aerialAnimal);
+      }
+    }
+  }
+
+  return animals;
+};
+
 const writeHTML = (answers) => {
   console.log(answers);
   const callback = (err) => {

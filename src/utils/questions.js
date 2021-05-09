@@ -1,5 +1,28 @@
 const questions = [
   {
+    type: "list",
+    message: "Select the employee you would like to add:",
+    name: "employeeChoice",
+    choices: [
+      {
+        name: "Manager",
+        value: "manager",
+      },
+      {
+        name: "Engineer",
+        value: "engineer",
+      },
+      {
+        name: "Intern",
+        value: "intern",
+      },
+      {
+        name: "Exit",
+        value: "exit",
+      },
+    ],
+  },
+  {
     type: "input",
     message: "Please enter the manager name:",
     name: "managerName",
@@ -18,25 +41,6 @@ const questions = [
     type: "input",
     message: "Please enter the office number:",
     name: "managerOfficeNum",
-  },
-  {
-    type: "list",
-    message: "Select the employee you would like to add:",
-    name: "employeeChoice",
-    choices: [
-      {
-        name: "Engineer",
-        value: "engineer",
-      },
-      {
-        name: "Intern",
-        value: "intern",
-      },
-      {
-        name: "Exit",
-        value: "exit",
-      },
-    ],
   },
   {
     type: "input",
