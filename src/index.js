@@ -11,7 +11,7 @@ const collectEmployees = async () => {
   let inProgress = true;
 
   while (inProgress) {
-    const answers = await questionAnswers();
+    const answers = await questionAnswers(questions);
 
     if (answers.employeeChoice === "exit") {
       inProgress = false;
