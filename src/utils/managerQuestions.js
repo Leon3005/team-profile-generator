@@ -38,4 +38,4 @@ const createManager = async () => {
   return employee;
 };
 
-module.exports = createTerrestrialAnimal;
+module.exports = createManager;

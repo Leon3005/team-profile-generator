@@ -3,6 +3,7 @@ const fs = require("fs");
 const questions = require("./utils/questions");
 const generateHTML = require("./utils/generateHTML");
 const questionAnswers = require("./utils/questionAnswers");
+const managerQuestions = require("./utils/managerQuestions");
 
 const collectEmployees = async () => {
   const employees = [];
@@ -16,23 +17,23 @@ const collectEmployees = async () => {
       inProgress = false;
     } else {
       if (answers.employeeChoice === "manager") {
-        const managerChoice = await createTerrestrialAnimal();
-        employees.push(terrestrialAnimal);
+        const managerChoice = await managerQuestions();
+        employees.push(managerChoice);
       }
 
-      if (answers.employeeChoice === "aquatic") {
-        const aquaticAnimal = await createAquaticAnimal();
-        animals.push(aquaticAnimal);
-      }
+      // if (answers.employeeChoice === "aquatic") {
+      //   const aquaticAnimal = await createAquaticAnimal();
+      //   animals.push(aquaticAnimal);
+      // }
 
-      if (answers.employeeChoice === "aerial") {
-        const aerialAnimal = createAerialAnimal();
-        animals.push(aerialAnimal);
-      }
+      // if (answers.employeeChoice === "aerial") {
+      //   const aerialAnimal = createAerialAnimal();
+      //   animals.push(aerialAnimal);
+      // }
     }
   }
 
-  return animals;
+  return employees;
 };
 
 const writeHTML = (answers) => {
@@ -53,8 +54,8 @@ const writeHTML = (answers) => {
 };
 
 const init = async () => {
-  const answers = await questionResponses(questions);
-  writeHTML(answers);
+  const employees = await collectEmployees();
+  writeHTML(employees);
 };
 
 init(questions);
