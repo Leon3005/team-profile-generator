@@ -8,25 +8,25 @@ const createManager = async () => {
     {
       type: "input",
       message: "Please enter the manager name:",
-      name: "managerName",
+      name: "name",
       when: (answers) => answers.employeeChoice === "manager",
     },
     {
       type: "input",
       message: "Please enter the manager's ID:",
-      name: "managerId",
+      name: "id",
       when: (answers) => answers.employeeChoice === "manager",
     },
     {
       type: "input",
       message: "Please enter the manager's email address:",
-      name: "managerEmail",
+      name: "email",
       when: (answers) => answers.employeeChoice === "manager",
     },
     {
       type: "input",
       message: "Please enter the office number:",
-      name: "managerOfficeNum",
+      name: "officeNumber",
       when: (answers) => answers.employeeChoice === "manager",
     },
   ];
