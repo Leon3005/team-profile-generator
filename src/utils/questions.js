@@ -22,26 +22,7 @@ const questions = [
       },
     ],
   },
-  {
-    type: "input",
-    message: "Please enter the manager name:",
-    name: "managerName",
-  },
-  {
-    type: "input",
-    message: "Please enter the manager's ID:",
-    name: "managerId",
-  },
-  {
-    type: "input",
-    message: "Please enter the manager's email address:",
-    name: "managerEmail",
-  },
-  {
-    type: "input",
-    message: "Please enter the office number:",
-    name: "managerOfficeNum",
-  },
+
   {
     type: "input",
     message: "Enter the engineer's name:",

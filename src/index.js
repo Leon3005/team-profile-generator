@@ -2,12 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const questions = require("./utils/questions");
 const generateHTML = require("./utils/generateHTML");
-
-const questionResponses = async (questions) => {
-  const answers = await inquirer.prompt(questions);
-  console.log(answers);
-  return answers;
-};
+const questionAnswers = require("./utils/questionAnswers");
 
 const collectEmployees = async () => {
   const employees = [];
@@ -15,14 +10,14 @@ const collectEmployees = async () => {
   let inProgress = true;
 
   while (inProgress) {
-    const answers = await questionResponses();
+    const answers = await questionAnswers();
 
     if (answers.employeeChoice === "exit") {
       inProgress = false;
     } else {
-      if (answers.employeeChoice === "terrestrial") {
-        const terrestrialAnimal = await createTerrestrialAnimal();
-        animals.push(terrestrialAnimal);
+      if (answers.employeeChoice === "manager") {
+        const managerChoice = await createTerrestrialAnimal();
+        employees.push(terrestrialAnimal);
       }
 
       if (answers.employeeChoice === "aquatic") {
