@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const questions = require("./utils/questions");
-const generateManagerHTML = require("./utils/generateHTML");
+const generateHTML = require("./utils/generateHTML");
 
 const questionResponses = async (questions) => {
   const answers = await inquirer.prompt(questions);
@@ -20,7 +20,7 @@ const writeHTML = (answers) => {
   };
   fs.writeFile(
     "../dist/TestHTML.html",
-    generateManagerHTML(answers),
+    generateHTML(answers),
     "utf8",
     callback
   );

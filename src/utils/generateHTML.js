@@ -1,5 +1,27 @@
-const generateManagerHTML = (data) => {
-  const { managerName, managerId, managerEmail, managerOfficeNum } = data;
+const generateManagerCard = (manager) => {
+  const { managerName, managerId, managerEmail, managerOfficeNum } = manager;
+  return `
+        <div
+        class="card text-white bg-dark mb-3 engineerCard"
+        style="width: 18rem"
+      >
+        <div class="card-body">
+          <h5 class="card-title">${managerName}</h5>
+          <p class="card-text">Manager</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-white bg-dark">ID: ${managerId}</li>
+          <li class="list-group-item text-white bg-dark">Email: ${managerEmail}</li>
+          <li class="list-group-item text-white bg-dark">Office Number: ${managerOfficeNum}</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+        </div>
+        </div>
+`;
+};
+
+const generateHTML = (data) => {
   return `
   <!DOCTYPE html>
 <html lang="en">
@@ -23,23 +45,6 @@ const generateManagerHTML = (data) => {
       </div>
     </header>
     <div class="cards">
-      <div
-        class="card text-white bg-dark mb-3 engineerCard"
-        style="width: 18rem"
-      >
-        <div class="card-body">
-          <h5 class="card-title">${managerName}</h5>
-          <p class="card-text">Manager</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item text-white bg-dark">ID: ${managerId}</li>
-          <li class="list-group-item text-white bg-dark">Email: ${managerEmail}</li>
-          <li class="list-group-item text-white bg-dark">Office Number: ${managerOfficeNum}</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-        </div>
-        </div>
         </div>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
@@ -52,4 +57,4 @@ const generateManagerHTML = (data) => {
   `;
 };
 
-module.exports = generateManagerHTML;
+module.exports = generateHTML;
