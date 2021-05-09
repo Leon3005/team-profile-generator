@@ -1,10 +1,10 @@
 const Manager = require("../../lib/manager");
-const baseQuestions = require("./questions");
+const questionsFile = require("./questions");
 const questionAnswers = require("./questionAnswers");
 
 const createManager = async () => {
   const questions = [
-    ...baseQuestions,
+    ...questionsFile,
     {
       type: "input",
       message: "Please enter the manager name:",

@@ -32,7 +32,6 @@ const collectEmployees = async () => {
       // }
     }
   }
-
   return employees;
 };
 
