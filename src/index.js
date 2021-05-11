@@ -3,7 +3,6 @@ const fs = require("fs");
 const questions = require("./utils/questions");
 const generateHTML = require("./utils/generateHTML");
 const questionAnswers = require("./utils/questionAnswers");
-// const employeeQuestions = require("./utils/employeeQuestions");
 const Manager = require("../lib/manager");
 const Engineer = require("../lib/engineer");
 
@@ -26,7 +25,6 @@ const collectEmployees = async () => {
       inProgress = false;
     } else {
       if (answers.employeeChoice === "engineer") {
-        // const answers = await questionAnswers(employeeQuestions);
         const engineer = new Engineer(
           answers.engineerName,
           answers.engineerId,
@@ -37,7 +35,6 @@ const collectEmployees = async () => {
         console.log(engineer);
       }
       if (answers.employeeChoice === "intern") {
-        // const engineer = await employeeQuestions();
         console.log("intern");
       }
 
