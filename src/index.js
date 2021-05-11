@@ -5,14 +5,15 @@ const generateHTML = require("./utils/generateHTML");
 const questionAnswers = require("./utils/questionAnswers");
 const Manager = require("../lib/manager");
 const Engineer = require("../lib/engineer");
+const askRole = require("./utils/askRole");
 
 const employees = [];
 
 const collectEmployees = async () => {
   let inProgress = true;
-
   while (inProgress) {
     const answers = await questionAnswers(questions);
+    const roleAnswer = await questionAnswers(askRole);
 
     const manager = new Manager(
       answers.Name,
@@ -21,23 +22,24 @@ const collectEmployees = async () => {
       answers.officeNumber
     );
 
-    if (answers.employeeChoice === "exit") {
+    if (roleAnswer.employeeChoice === "exit") {
       inProgress = false;
     } else {
-      if (answers.employeeChoice === "engineer") {
+      if (roleAnswer.employeeChoice === "engineer") {
         const engineer = new Engineer(
-          answers.engineerName,
-          answers.engineerId,
-          answers.engineerEmail,
-          answers.engineerGitHub
+          roleAnswer.engineerName,
+          roleAnswer.engineerId,
+          roleAnswer.engineerEmail,
+          roleAnswer.engineerGitHub
         );
         employees.push(engineer);
         console.log(engineer);
+        await questionAnswers(askRole);
+        // init(askRole);
       }
-      if (answers.employeeChoice === "intern") {
+      if (roleAnswer.employeeChoice === "intern") {
         console.log("intern");
       }
-
       employees.push(manager);
 
       return employees;
