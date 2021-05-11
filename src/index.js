@@ -64,8 +64,8 @@ const writeHTML = (answers) => {
 };
 
 const init = async () => {
-  const manager = await collectEmployees();
-  writeHTML(manager);
+  const answers = await collectEmployees();
+  writeHTML(answers);
 };
 
 init(questions);
