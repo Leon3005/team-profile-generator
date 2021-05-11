@@ -14,15 +14,29 @@ const collectEmployees = async () => {
   while (inProgress) {
     const answers = await questionAnswers(questions);
 
-    const employee = new Manager(
+    const manager = new Manager(
       answers.Name,
       answers.id,
       answers.email,
       answers.officeNumber
     );
 
-    employees.push(employee);
-    return employees;
+    if (answers.employeeChoice === "exit") {
+      inProgress = false;
+    } else {
+      if (answers.employeeChoice === "engineer") {
+        // const engineer = await employeeQuestions();
+        console.log("engineer");
+      }
+      if (answers.employeeChoice === "intern") {
+        // const engineer = await employeeQuestions();
+        console.log("intern");
+      }
+
+      employees.push(manager);
+
+      return employees;
+    }
   }
   return employees;
 };
