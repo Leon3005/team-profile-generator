@@ -25,22 +25,22 @@ const generateManagerCard = (manager) => {
 };
 
 const generateEngineerCard = (engineer) => {
-  const { engineerName, engineerId, engineerEmail, engineerGitHub } = engineer;
+  const { Name, id, email, github } = engineer;
   return `
           <div
           class="card text-white bg-dark mb-3 engineerCard"
           style="width: 18rem"
         >
           <div class="card-body">
-            <h5 class="card-title">${engineerName}</h5>
+            <h5 class="card-title">${Name}</h5>
             <p class="card-text">Engineer</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item text-white bg-dark">ID: ${engineerId}</li>
-            <li class="list-group-item text-white bg-dark">Email: ${engineerEmail}</li>
+            <li class="list-group-item text-white bg-dark">ID: ${id}</li>
+            <li class="list-group-item text-white bg-dark">Email: ${email}</li>
           </ul>
           <div class="card-body">
-            <a href="${engineerGitHub}" class="card-link">Github</a>
+            <a href="${github}" class="card-link">Github</a>
           </div>
           </div>
   `;
