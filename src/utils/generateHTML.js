@@ -1,3 +1,4 @@
+const Engineer = require("../../lib/engineer");
 const Manager = require("../../lib/manager");
 
 const generateManagerCard = (manager) => {
@@ -23,6 +24,28 @@ const generateManagerCard = (manager) => {
   `;
 };
 
+const generateEngineerCard = (engineer) => {
+  const { engineerName, engineerId, engineerEmail, engineerGitHub } = engineer;
+  return `
+          <div
+          class="card text-white bg-dark mb-3 engineerCard"
+          style="width: 18rem"
+        >
+          <div class="card-body">
+            <h5 class="card-title">${engineerName}</h5>
+            <p class="card-text">Engineer</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-white bg-dark">ID: ${engineerId}</li>
+            <li class="list-group-item text-white bg-dark">Email: ${engineerEmail}</li>
+          </ul>
+          <div class="card-body">
+            <a href="${engineerGitHub}" class="card-link">Github</a>
+          </div>
+          </div>
+  `;
+};
+
 const generateHTML = (employees) => {
   const generateCard = (employee) => {
     // if (animal instanceof Aquatic) {
@@ -30,6 +53,10 @@ const generateHTML = (employees) => {
     // }
     if (employee instanceof Manager) {
       return generateManagerCard(employee);
+    } else {
+      if (employee instanceof Engineer) {
+        return generateEngineerCard(employee);
+      }
     }
   };
 
