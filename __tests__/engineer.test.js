@@ -9,7 +9,7 @@ const engineer1 = new Engineer(
 describe("Engineer's details", () => {
   it("should return the inputted name", () => {
     const expected = "Leon";
-    const actual = engineer1.name;
+    const actual = engineer1.Name;
     expect(actual).toEqual(expected);
   });
   it("should return the inputted id", () => {

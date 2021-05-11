@@ -5,7 +5,7 @@ const manager1 = new Manager("John", "749", "john@john.com", 9182928383);
 describe("Manager's details", () => {
   it("should return the inputted name", () => {
     const expected = "John";
-    const actual = manager1.name;
+    const actual = manager1.Name;
     expect(actual).toEqual(expected);
   });
   it("should return the inputted id", () => {
