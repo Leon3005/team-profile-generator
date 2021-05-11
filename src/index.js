@@ -3,37 +3,10 @@ const fs = require("fs");
 const questions = require("./utils/questions");
 const generateHTML = require("./utils/generateHTML");
 const questionAnswers = require("./utils/questionAnswers");
-const managerQuestions = require("./utils/managerQuestions");
+const employeeQuestions = require("./utils/employeeQuestions");
 const Manager = require("../lib/manager");
 
 const employees = [];
-
-const promptEmployees = async () => {
-  const questionsChoice = [
-    {
-      type: "list",
-      message: "Select the employee you would like to add:",
-      name: "employeeChoice",
-      choices: [
-        {
-          name: "Engineer",
-          value: "engineer",
-        },
-        {
-          name: "Intern",
-          value: "intern",
-        },
-        {
-          name: "Exit",
-          value: "exit",
-        },
-      ],
-    },
-  ];
-  const answers = await questionAnswers(questionsChoice);
-
-  return answers;
-};
 
 const collectEmployees = async () => {
   let inProgress = true;
@@ -49,17 +22,6 @@ const collectEmployees = async () => {
     );
 
     employees.push(employee);
-    // employees.push(answers);
-
-    // if (answers.employeeChoice === "aquatic") {
-    //   const aquaticAnimal = await createAquaticAnimal();
-    //   animals.push(aquaticAnimal);
-    // }
-
-    // if (answers.employeeChoice === "aerial") {
-    //   const aerialAnimal = createAerialAnimal();
-    //   animals.push(aerialAnimal);
-    // }
     return employees;
   }
   return employees;
@@ -83,8 +45,8 @@ const writeHTML = (answers) => {
 };
 
 const init = async () => {
-  const answers = await collectEmployees();
-  writeHTML(answers);
+  const manager = await collectEmployees();
+  writeHTML(manager);
 };
 
 init(questions);

@@ -19,6 +19,25 @@ const questions = [
     message: "Please enter the office number:",
     name: "officeNumber",
   },
+  {
+    type: "list",
+    message: "Select the employee you would like to add:",
+    name: "employeeChoice",
+    choices: [
+      {
+        name: "Engineer",
+        value: "engineer",
+      },
+      {
+        name: "Intern",
+        value: "intern",
+      },
+      {
+        name: "Exit",
+        value: "exit",
+      },
+    ],
+  },
   // {
   //   type: "input",
   //   message: "Enter the engineer's name:",
