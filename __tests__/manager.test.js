@@ -28,4 +28,9 @@ describe("Manager's details", () => {
     const actual = manager1.getRole();
     expect(actual).toEqual(expected);
   });
+  it("should be a number", () => {
+    const expected = 9182928383;
+    const actual = manager1.officeNumber;
+    expect(actual).toEqual(Number);
+  });
 });

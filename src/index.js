@@ -47,7 +47,6 @@ const collectEmployees = async () => {
         employees.push(engineer);
         console.log(engineer);
         initRole(askRole);
-        // init(askRole);
       }
       if (roleAnswer.employeeChoice === "intern") {
         const intern = new Intern(

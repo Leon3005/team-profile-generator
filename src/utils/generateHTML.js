@@ -11,7 +11,7 @@ const generateManagerCard = (manager) => {
         >
           <div class="card-body">
             <h5 class="card-title">${Name}</h5>
-            <p class="card-text">Manager</p>
+            <p class="card-text"><i class="fas fa-user-graduate"></i> Manager</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item text-white bg-dark">ID: ${id}</li>
@@ -19,7 +19,6 @@ const generateManagerCard = (manager) => {
             <li class="list-group-item text-white bg-dark">Office Number: ${officeNumber}</li>
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
           </div>
           </div>
   `;
@@ -34,7 +33,7 @@ const generateEngineerCard = (engineer) => {
         >
           <div class="card-body">
             <h5 class="card-title">${Name}</h5>
-            <p class="card-text">Engineer</p>
+            <p class="card-text"><i class="fas fa-glasses"></i> Engineer</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item text-white bg-dark">ID: ${id}</li>
@@ -56,7 +55,7 @@ const generateInternCard = (intern) => {
         >
           <div class="card-body">
             <h5 class="card-title">${Name}</h5>
-            <p class="card-text">Intern</p>
+            <p class="card-text"><i class="fas fa-user-graduate"></i> Intern</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item text-white bg-dark">ID: ${id}</li>
@@ -102,6 +101,7 @@ const generateHTML = (employees) => {
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/19442e565b.js" crossorigin="anonymous"></script>
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
