@@ -29,10 +29,10 @@ Run 'node index.js' and answer the given prompts.
 
 **Command Line:**
 
-Here is an example of the prompt for the Manager name:
+Here is an example of the prompt for the Manager name:  
 ![CMD](./assets/images/managerName.png "CMD")
 
-Choices for Engineer or Intern:
+Choices for Engineer or Intern:  
 ![Choices](./assets/images/choices.png "Choices")
 
 **Generated HTML:**
