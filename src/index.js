@@ -45,7 +45,6 @@ const collectEmployees = async () => {
           roleAnswer.engineerGitHub
         );
         employees.push(engineer);
-        console.log(engineer);
         initRole(askRole);
       }
       if (roleAnswer.employeeChoice === "intern") {
@@ -56,7 +55,6 @@ const collectEmployees = async () => {
           roleAnswer.internSchool
         );
         employees.push(intern);
-        console.log(intern);
         initRole(askRole);
       }
 
@@ -67,7 +65,6 @@ const collectEmployees = async () => {
 };
 
 const writeHTML = (answers) => {
-  console.log(answers);
   const callback = (err) => {
     if (err) {
       console.log(err);
