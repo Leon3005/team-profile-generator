@@ -1,4 +1,3 @@
-const inquirer = require("inquirer");
 const fs = require("fs");
 const questions = require("./utils/questions");
 const generateHTML = require("./utils/generateHTML");

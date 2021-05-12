@@ -30,7 +30,7 @@ const questions = [
     message: "Please enter the manager's email address:",
     name: "email",
     validate: (inputtedEmail) => {
-      if (inputtedEmail) {
+      if (inputtedEmail && inputtedEmail.includes("@")) {
         return true;
       } else {
         console.log("-- Please enter an email address");
@@ -51,31 +51,6 @@ const questions = [
       }
     },
   },
-
-  // {
-  //   type: "input",
-  //   message: "Enter the engineer's name:",
-  //   name: "engineerName",
-  //   when: (answers) => answers.employeeChoice === "engineer",
-  // },
-  // {
-  //   type: "input",
-  //   message: "Enter the engineer's ID:",
-  //   name: "engineerId",
-  //   when: (answers) => answers.employeeChoice === "engineer",
-  // },
-  // {
-  //   type: "input",
-  //   message: "Enter the engineer's email:",
-  //   name: "engineerEmail",
-  //   when: (answers) => answers.employeeChoice === "engineer",
-  // },
-  // {
-  //   type: "input",
-  //   message: "Enter the engineer's GitHub username:",
-  //   name: "engineerGithub",
-  //   when: (answers) => answers.employeeChoice === "engineer",
-  // },
 ];
 
 // Exporting the questions array to be used in another file.
