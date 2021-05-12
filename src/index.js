@@ -5,6 +5,7 @@ const generateHTML = require("./utils/generateHTML");
 const questionAnswers = require("./utils/questionAnswers");
 const Manager = require("../lib/manager");
 const Engineer = require("../lib/engineer");
+const Intern = require("../lib/intern");
 const askRole = require("./utils/askRole");
 
 const employees = [];
@@ -13,7 +14,6 @@ const collectEmployees = async () => {
   let inProgress = true;
   while (inProgress) {
     const answers = await questionAnswers(questions);
-    const roleAnswer = await questionAnswers(askRole);
 
     const manager = new Manager(
       answers.Name,
@@ -38,7 +38,15 @@ const collectEmployees = async () => {
         // init(askRole);
       }
       if (roleAnswer.employeeChoice === "intern") {
-        console.log("intern");
+        const intern = new Intern(
+          roleAnswer.internName,
+          roleAnswer.internId,
+          roleAnswer.internEmail,
+          roleAnswer.internSchool
+        );
+        employees.push(intern);
+        console.log(intern);
+        await questionAnswers(askRole);
       }
       employees.push(manager);
 

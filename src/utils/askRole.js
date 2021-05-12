@@ -22,25 +22,49 @@ const askRole = [
     type: "input",
     message: "Please enter the engineer's name:",
     name: "engineerName",
-    when: (answers) => answers.employeeChoice === "engineer",
+    when: (roleAnswer) => roleAnswer.employeeChoice === "engineer",
   },
   {
     type: "input",
     message: "Please enter the engineer's ID:",
     name: "engineerId",
-    when: (answers) => answers.employeeChoice === "engineer",
+    when: (roleAnswer) => roleAnswer.employeeChoice === "engineer",
   },
   {
     type: "input",
     message: "Please enter the engineer's email address:",
     name: "engineerEmail",
-    when: (answers) => answers.employeeChoice === "engineer",
+    when: (roleAnswer) => roleAnswer.employeeChoice === "engineer",
   },
   {
     type: "input",
     message: "Please enter the engineer's GitHub link:",
     name: "engineerGitHub",
-    when: (answers) => answers.employeeChoice === "engineer",
+    when: (roleAnswer) => roleAnswer.employeeChoice === "engineer",
+  },
+  {
+    type: "input",
+    message: "Please enter the intern's name:",
+    name: "internName",
+    when: (roleAnswer) => roleAnswer.employeeChoice === "intern",
+  },
+  {
+    type: "input",
+    message: "Please enter the intern's ID:",
+    name: "internId",
+    when: (roleAnswer) => roleAnswer.employeeChoice === "intern",
+  },
+  {
+    type: "input",
+    message: "Please enter the intern's email address:",
+    name: "internEmail",
+    when: (roleAnswer) => roleAnswer.employeeChoice === "intern",
+  },
+  {
+    type: "input",
+    message: "Please enter the intern's School:",
+    name: "internSchool",
+    when: (roleAnswer) => roleAnswer.employeeChoice === "intern",
   },
 ];
 
