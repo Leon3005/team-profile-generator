@@ -10,10 +10,11 @@ const askRole = require("./utils/askRole");
 
 const employees = [];
 
-const collectEmployees = async () => {
+const collectManager = async () => {
   let inProgress = true;
   while (inProgress) {
     const answers = await questionAnswers(questions);
+    initRole(askRole);
 
     const manager = new Manager(
       answers.Name,
@@ -21,6 +22,17 @@ const collectEmployees = async () => {
       answers.email,
       answers.officeNumber
     );
+    employees.push(manager);
+
+    return employees;
+  }
+  return employees;
+};
+
+const collectEmployees = async () => {
+  let inProgress = true;
+  while (inProgress) {
+    const roleAnswer = await questionAnswers(askRole);
 
     if (roleAnswer.employeeChoice === "exit") {
       inProgress = false;
@@ -34,7 +46,7 @@ const collectEmployees = async () => {
         );
         employees.push(engineer);
         console.log(engineer);
-        await questionAnswers(askRole);
+        initRole(askRole);
         // init(askRole);
       }
       if (roleAnswer.employeeChoice === "intern") {
@@ -46,9 +58,8 @@ const collectEmployees = async () => {
         );
         employees.push(intern);
         console.log(intern);
-        await questionAnswers(askRole);
+        initRole(askRole);
       }
-      employees.push(manager);
 
       return employees;
     }
@@ -74,8 +85,13 @@ const writeHTML = (answers) => {
 };
 
 const init = async () => {
-  const answers = await collectEmployees();
+  const answers = await collectManager();
   writeHTML(answers);
+};
+
+const initRole = async () => {
+  const roleAnswers = await collectEmployees();
+  writeHTML(roleAnswers);
 };
 
 init(questions);
