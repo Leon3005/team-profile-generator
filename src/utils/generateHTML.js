@@ -102,6 +102,8 @@ const generateHTML = (employees) => {
       crossorigin="anonymous"
     />
     <script src="https://kit.fontawesome.com/19442e565b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
