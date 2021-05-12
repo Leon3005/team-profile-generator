@@ -14,16 +14,21 @@ The Team Profile Generator allows you to create a Team page with a Manager and a
   - [Screenshots](#screenshots)
   - [Tech/framework used](#techframework-used)
   - [Features](#features)
+  - [Scripts](#scripts)
   - [Tests](#tests)
   - [Contact](#contact)
 
 ## Installation
 
-Run 'npm install' and run 'node index.js'.
+```
+npm install
+```
 
 ## Usage
 
-Run 'node index.js' and answer the given prompts.
+Run 'node index.js' from the /src folder and answer the given prompts.
+
+The generated HTML is located in the '/dist/' folder.
 
 ## Screenshots
 
@@ -52,6 +57,16 @@ Here is an example of the generated Team Profile:
 - Generate a card with Manager details
 - Generate cards with Engineer details
 - Generate cards with Intern details
+
+## Scripts
+
+You can use the below scripts to run the app or start some tests:
+
+```
+npm start
+npm test
+npm test:watch
+```
 
 ## Tests
 
