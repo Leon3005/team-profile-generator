@@ -53,5 +53,4 @@ const questions = [
   },
 ];
 
-// Exporting the questions array to be used in another file.
 module.exports = questions;

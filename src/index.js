@@ -34,6 +34,7 @@ const collectEmployees = async () => {
     const roleAnswer = await questionAnswers(askRole);
 
     if (roleAnswer.employeeChoice === "exit") {
+      console.log("Created Team Profile!");
       inProgress = false;
     } else {
       if (roleAnswer.employeeChoice === "engineer") {
@@ -67,8 +68,6 @@ const writeHTML = (answers) => {
   const callback = (err) => {
     if (err) {
       console.log(err);
-    } else {
-      console.log("Created Team Profile!");
     }
   };
   fs.writeFile(
