@@ -37,7 +37,7 @@ Choices for Engineer or Intern:
 
 **Generated HTML:**
 
-Here is an example of the generated Team Profile:
+Here is an example of the generated Team Profile:  
 ![Team Profile](./assets/images/managerName.png "Team Profile")
 
 ## Tech/framework used
