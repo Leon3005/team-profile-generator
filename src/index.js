@@ -70,12 +70,7 @@ const writeHTML = (answers) => {
       console.log(err);
     }
   };
-  fs.writeFile(
-    "../dist/TestHTML.html",
-    generateHTML(answers),
-    "utf8",
-    callback
-  );
+  fs.writeFile("../dist/index.html", generateHTML(answers), "utf8", callback);
 };
 
 const init = async () => {

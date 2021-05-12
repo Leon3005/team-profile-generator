@@ -60,7 +60,7 @@ const generateInternCard = (intern) => {
           <ul class="list-group list-group-flush">
             <li class="list-group-item text-white bg-dark">ID: ${id}</li>
             <li class="list-group-item text-white bg-dark">Email: <a href="mailto:${email}">${email}</a></li>
-            <li class="list-group-item text-white bg-dark">Email: ${school}</li>
+            <li class="list-group-item text-white bg-dark">School: ${school}</li>
           </ul>
           <div class="card-body">
           </div>
