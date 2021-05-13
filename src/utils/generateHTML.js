@@ -40,7 +40,7 @@ const generateEngineerCard = (engineer) => {
             <li class="list-group-item text-white bg-dark">Email: <a href="mailto:${email}">${email}</a></li>
           </ul>
           <div class="card-body">
-            <a href="${github}" class="card-link">Github</a>
+            <a href="https://github.com/${github}" target="_blank" class="card-link">Github</a>
           </div>
           </div>
   `;

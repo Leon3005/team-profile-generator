@@ -62,14 +62,14 @@ const askRole = [
   },
   {
     type: "input",
-    message: "Please enter the engineer's GitHub link:",
+    message: "Please enter the engineer's GitHub username:",
     name: "engineerGitHub",
     when: (roleAnswer) => roleAnswer.employeeChoice === "engineer",
     validate: (inputtedGit) => {
-      if (inputtedGit && inputtedGit.includes("github.com")) {
+      if (inputtedGit) {
         return true;
       } else {
-        console.log("-- Please enter valid GitHub link (all lowercase)");
+        console.log("-- Please enter a github username");
         return false;
       }
     },
