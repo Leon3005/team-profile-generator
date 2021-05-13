@@ -1,3 +1,4 @@
+//Questions for the manager user
 const questions = [
   {
     type: "input",

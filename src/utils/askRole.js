@@ -1,3 +1,4 @@
+//Array of questions that will be asked depending on which role the user chooses.
 const askRole = [
   {
     type: "list",
@@ -23,6 +24,7 @@ const askRole = [
     message: "Please enter the engineer's name:",
     name: "engineerName",
     when: (roleAnswer) => roleAnswer.employeeChoice === "engineer",
+    //The below is used to check if the user has inputted anything.
     validate: (inputtedName) => {
       if (inputtedName) {
         return true;

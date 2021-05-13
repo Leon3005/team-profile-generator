@@ -1,7 +1,9 @@
+// Importing classes
 const Engineer = require("../../lib/engineer");
 const Intern = require("../../lib/intern");
 const Manager = require("../../lib/manager");
 
+//The functions below are used to generate cards depending on the role choses. Using template literals to access the data.
 const generateManagerCard = (manager) => {
   const { Name, id, email, officeNumber } = manager;
   return `
@@ -68,11 +70,9 @@ const generateInternCard = (intern) => {
   `;
 };
 
+// This function will check which role the employee has and generate the card depending on the role.
 const generateHTML = (employees) => {
   const generateCard = (employee) => {
-    // if (animal instanceof Aquatic) {
-    //   return "Aquatic";
-    // }
     if (employee instanceof Manager) {
       return generateManagerCard(employee);
     } else {
@@ -85,6 +85,7 @@ const generateHTML = (employees) => {
     }
   };
 
+  //Generates card for each object in the employees array
   const cards = employees.map(generateCard);
 
   return `
