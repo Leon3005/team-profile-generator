@@ -69,7 +69,7 @@ const askRole = [
       if (inputtedGit && inputtedGit.includes("github.com")) {
         return true;
       } else {
-        console.log("-- Please enter valid GitHub link");
+        console.log("-- Please enter valid GitHub link (all lowercase)");
         return false;
       }
     },
