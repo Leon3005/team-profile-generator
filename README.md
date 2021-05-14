@@ -16,6 +16,7 @@ The Team Profile Generator allows you to create a Team page with a Manager and a
   - [Features](#features)
   - [Scripts](#scripts)
   - [Tests](#tests)
+  - [Walkthrough Recording](#walkthrough-recording)
   - [Contact](#contact)
 
 ## Installation
@@ -70,7 +71,16 @@ npm test:watch
 
 ## Tests
 
-WIP
+Use the /**tests** folder to edit the tests.
+
+```
+npm test
+npm test:watch
+```
+
+## Walkthrough Recording
+
+[Google Drive Link](https://drive.google.com/file/d/1fV5aOglE9wxQ4fXuaR68_ucxU62RRZoO/view?usp=sharing)
 
 ## Contact
 
