@@ -127,7 +127,7 @@ const askRole = [
       if (inputtedSchool) {
         return true;
       } else {
-        console.log("-- Please enter a name");
+        console.log("-- Please enter a school");
         return false;
       }
     },
