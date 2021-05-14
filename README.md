@@ -71,7 +71,7 @@ npm test:watch
 
 ## Tests
 
-Use the "/__tests__" folder to edit the tests.
+Use the tests folder to edit the tests.
 
 ```
 npm test
